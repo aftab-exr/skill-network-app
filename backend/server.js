@@ -10,8 +10,9 @@ const PORT = process.env.PORT || 3000;
 
 // Middleware
 const corsOptions = {
-  origin: 'https://skill-network-app.vercel.app' 
-}; // Enable Cross-Origin Resource Sharing
+  origin: 'https://skill-network-app.vercel.app'
+};
+app.use(cors(corsOptions)); // This is the important line that uses the options
 app.use(express.json()); // To parse JSON bodies
 
 // Serve static files from the 'public' directory
@@ -28,4 +29,5 @@ app.get('*', (req, res) => {
 app.listen(PORT, () => {
     console.log(`Server is running on http://localhost:${PORT}`);
 });
+
 
