@@ -11,11 +11,18 @@ document.addEventListener('DOMContentLoaded', () => {
         elementToUpdate.innerHTML = '<div class="flex justify-center items-center p-4"><div class="loader"></div></div>';
 
         try {
-            const response = await fetch('/api/gemini', { // Our new backend endpoint
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ prompt: prompt }) // Send the prompt in the body
+            const backendUrl = 'https://skill-network-backend.onrender.com'; // <-- YOUR RENDER URL
+
+            const response = await fetch(backendUrl, { 
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ prompt: prompt }) 
             });
+            // const response = await fetch('/api/gemini', { // Our new backend endpoint
+            //     method: 'POST',
+            //     headers: { 'Content-Type': 'application/json' },
+            //     body: JSON.stringify({ prompt: prompt }) // Send the prompt in the body
+            // });
 
             if (!response.ok) {
                 throw new Error(`API Error: ${response.statusText}`);
@@ -149,3 +156,4 @@ document.addEventListener('DOMContentLoaded', () => {
     updateToggleLabels(toggle.checked);
     observeElements();
 });
+
