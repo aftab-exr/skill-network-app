@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skill Network - Data Analyst Pathways</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <!-- Link to external CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="antialiased">
+
+    <!-- Navigation -->
+    <nav class="bg-gray-900/80 backdrop-blur-sm sticky top-0 z-40">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <svg class="w-8 h-8 text-teal-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                </svg>
+                <span class="text-2xl font-bold text-white">Skill Network</span>
+            </div>
+            <div class="hidden md:flex items-center space-x-6">
+                <a href="#pathways" class="text-gray-300 hover:text-teal-400 transition-colors">Pathways</a>
+                <a href="#aitools" class="text-gray-300 hover:text-teal-400 transition-colors">AI Tools</a>
+                <a href="#testimonials" class="text-gray-300 hover:text-teal-400 transition-colors">Testimonials</a>
+            </div>
+            <a href="#enroll"
+                class="hidden md:block bg-teal-600 hover:bg-teal-700 text-white font-bold py-2 px-5 rounded-lg transition-colors">Enroll
+                Now</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="text-center py-20 md:py-32 px-6 bg-gray-900">
+        <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight mb-4 text-white">
+            Unlock Your Future in Data Analysis
+        </h1>
+        <p class="max-w-3xl mx-auto text-lg text-gray-400 mb-8">
+            Skill Network offers expert-designed learning pathways to transform you into a job-ready data analyst.
+            Master in-demand skills with our unique, <span class="gradient-text font-semibold">AI-powered learning
+                platform.</span>
+        </p>
+        <a href="#pathways"
+            class="bg-teal-600 hover:bg-teal-700 text-white font-bold py-3 px-8 rounded-lg transition-colors text-lg">Explore
+            Pathways</a>
+    </header>
+
+    <main class="container mx-auto px-6 py-20">
+        <!-- "Why Choose Us" Section -->
+        <section class="reveal mb-24">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-4 text-white">The Skill Network Advantage</h2>
+            <p class="text-center text-gray-400 max-w-2xl mx-auto mb-12">We provide a learning experience that's
+                comprehensive, flexible, and built for the future of data.</p>
+            <div class="grid md:grid-cols-3 gap-8 text-center">
+                <div class="bg-gray-800/50 border border-gray-700 p-8 rounded-2xl">
+                    <h3 class="text-xl font-bold text-teal-400 mb-3">Dual Learning Paths</h3>
+                    <p>Choose between a 6-month core curriculum or an 8-month AI-intensive track to match your career
+                        goals.</p>
+                </div>
+                <div class="bg-gray-800/50 border border-gray-700 p-8 rounded-2xl">
+                    <h3 class="text-xl font-bold text-teal-400 mb-3">Interactive AI Tools</h3>
+                    <p>Leverage our built-in AI to explain complex topics, generate portfolio projects, and act as your
+                        personal career coach.</p>
+                </div>
+                <div class="bg-gray-800/50 border border-gray-700 p-8 rounded-2xl">
+                    <h3 class="text-xl font-bold text-teal-400 mb-3">Career-Focused Projects</h3>
+                    <p>Go beyond theory. Build a portfolio of real-world projects that will impress recruiters and
+                        hiring managers.</p>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Learning Pathways Section -->
+        <section id="pathways" class="reveal mb-24">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-white">Our Learning Pathways</h2>
+            <!-- Toggle Switch Section -->
+            <div class="flex items-center justify-center space-x-4 mb-12">
+                <span id="simpleLabel" class="font-medium text-gray-400">6-Month Core Path</span>
+                <div class="relative inline-block w-14 align-middle select-none transition duration-200 ease-in">
+                    <input type="checkbox" name="toggle" id="roadmapToggle"
+                        class="toggle-checkbox absolute block w-7 h-7 rounded-full bg-white border-4 border-gray-600 appearance-none cursor-pointer transition-transform duration-300"
+                        checked />
+                    <label for="roadmapToggle"
+                        class="toggle-label block overflow-hidden h-7 rounded-full bg-gray-700 cursor-pointer"></label>
+                </div>
+                <span id="aiLabel" class="font-medium text-teal-400">8-Month AI-Powered Path</span>
+            </div>
+
+            <!-- AI-Powered Roadmap Content -->
+            <div id="aiRoadmap">
+                <div class="space-y-12">
+                    <section class="p-6 md:p-8 rounded-2xl bg-gray-800/50 border border-gray-700 shadow-xl">
+                        <h2 class="text-2xl font-bold mb-1 gradient-text">Months 1-2: The Bedrock</h2>
+                        <p class="text-gray-400 mb-6">Mastering core analytical concepts, advanced Excel, and the
+                            fundamentals of SQL.</p>
+                        <div class="space-y-3">
+                            <div class="accordion-item"><button
+                                    class="accordion-toggle w-full flex justify-between items-center text-left text-lg font-semibold p-4 bg-gray-900/70 rounded-lg hover:bg-gray-800 transition-colors"><span>Core
+                                        Concepts & Excel</span><svg class="w-5 h-5 transition-transform" fill="none"
+                                        stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M19 9l-7 7-7-7"></path>
+                                    </svg></button>
+                                <div class="accordion-content">
+                                    <div class="p-4 bg-gray-900 rounded-b-lg">
+                                        <ul class="list-disc list-inside text-gray-300 space-y-2">
+                                            <li>Data Analysis Process <button class="explain-btn"
+                                                    data-topic="The Data Analysis Process">✨</button></li>
+                                            <li>Advanced Excel: VLOOKUP/XLOOKUP, Pivot Tables, Power Query</li>
+                                            <li>Business Metrics & KPIs <button class="explain-btn"
+                                                    data-topic="Business KPIs">✨</button></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item"><button
+                                    class="accordion-toggle w-full flex justify-between items-center text-left text-lg font-semibold p-4 bg-gray-900/70 rounded-lg hover:bg-gray-800 transition-colors"><span>SQL
+                                        Fundamentals</span><svg class="w-5 h-5 transition-transform" fill="none"
+                                        stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M19 9l-7 7-7-7"></path>
+                                    </svg></button>
+                                <div class="accordion-content">
+                                    <div class="p-4 bg-gray-900 rounded-b-lg">
+                                        <ul class="list-disc list-inside text-gray-300 space-y-2">
+                                            <li>SELECT, FROM, WHERE</li>
+                                            <li>JOINs (INNER, LEFT, RIGHT) <button class="explain-btn"
+                                                    data-topic="SQL JOINs">✨</button></li>
+                                            <li>GROUP BY & Aggregations</li>
+                                            <li>Basic Subqueries</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item"><button
+                                    class="accordion-toggle w-full flex justify-between items-center text-left text-lg font-semibold p-4 bg-gray-900/70 rounded-lg hover:bg-gray-800 transition-colors"><span>AI
+                                        Integration 🤖</span><svg class="w-5 h-5 transition-transform" fill="none"
+                                        stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M19 9l-7 7-7-7"></path>
+                                    </svg></button>
+                                <div class="accordion-content">
+                                    <div class="p-4 bg-gray-900 rounded-b-lg">
+                                        <ul class="list-disc list-inside text-gray-300 space-y-2">
+                                            <li>Use Gemini as a Socratic learning tutor for SQL</li>
+                                            <li>Leverage Excel's AI-powered "Analyze Data" feature</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="p-6 md:p-8 rounded-2xl bg-gray-800/50 border border-gray-700 shadow-xl">
+                        <h2 class="text-2xl font-bold mb-1 gradient-text">Months 3-4: Storytelling & Programming</h2>
+                        <p class="text-gray-400 mb-6">Learning to visualize data with BI tools and automating analysis
+                            with Python.</p>
+                        <div class="space-y-3">
+                            <div class="accordion-item"><button
+                                    class="accordion-toggle w-full flex justify-between items-center text-left text-lg font-semibold p-4 bg-gray-900/70 rounded-lg hover:bg-gray-800 transition-colors"><span>Data
+                                        Visualization & BI Tools</span><svg class="w-5 h-5 transition-transform"
+                                        fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M19 9l-7 7-7-7"></path>
+                                    </svg></button>
+                                <div class="accordion-content">
+                                    <div class="p-4 bg-gray-900 rounded-b-lg">
+                                        <ul class="list-disc list-inside text-gray-300 space-y-2">
+                                            <li>Choose Power BI or Tableau</li>
+                                            <li>Principles of effective visualization</li>
+                                            <li>Build interactive, multi-page dashboards</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item"><button
+                                    class="accordion-toggle w-full flex justify-between items-center text-left text-lg font-semibold p-4 bg-gray-900/70 rounded-lg hover:bg-gray-800 transition-colors"><span>Python
+                                        for Data Analysis</span><svg class="w-5 h-5 transition-transform" fill="none"
+                                        stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M19 9l-7 7-7-7"></path>
+                                    </svg></button>
+                                <div class="accordion-content">
+                                    <div class="p-4 bg-gray-900 rounded-b-lg">
+                                        <ul class="list-disc list-inside text-gray-300 space-y-2">
+                                            <li>Pandas for data manipulation & cleaning <button class="explain-btn"
+                                                    data-topic="the Python Pandas library">✨</button></li>
+                                            <li>NumPy for numerical operations</li>
+                                            <li>Matplotlib & Seaborn for plotting</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item"><button
+                                    class="accordion-toggle w-full flex justify-between items-center text-left text-lg font-semibold p-4 bg-gray-900/70 rounded-lg hover:bg-gray-800 transition-colors"><span>AI
+                                        Integration 🤖</span><svg class="w-5 h-5 transition-transform" fill="none"
+                                        stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M19 9l-7 7-7-7"></path>
+                                    </svg></button>
+                                <div class="accordion-content">
+                                    <div class="p-4 bg-gray-900 rounded-b-lg">
+                                        <ul class="list-disc list-inside text-gray-300 space-y-2">
+                                            <li>Use GitHub Copilot to accelerate Python coding</li>
+                                            <li>Debug code and errors with Gemini</li>
+                                            <li>Use Power BI's natural language Q&A feature</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="p-6 md:p-8 rounded-2xl bg-gray-800/50 border border-gray-700 shadow-xl">
+                        <h2 class="text-2xl font-bold mb-1 gradient-text">Months 5-6: Advanced Topics</h2>
+                        <p class="text-gray-400 mb-6">Diving into advanced SQL, statistics, and foundational machine
+                            learning concepts.</p>
+                        <div class="space-y-3">
+                            <div class="accordion-item"><button
+                                    class="accordion-toggle w-full flex justify-between items-center text-left text-lg font-semibold p-4 bg-gray-900/70 rounded-lg hover:bg-gray-800 transition-colors"><span>Advanced
+                                        SQL & Statistics</span><svg class="w-5 h-5 transition-transform" fill="none"
+                                        stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M19 9l-7 7-7-7"></path>
+                                    </svg></button>
+                                <div class="accordion-content">
+                                    <div class="p-4 bg-gray-900 rounded-b-lg">
+                                        <ul class="list-disc list-inside text-gray-300 space-y-2">
+                                            <li>SQL Window Functions & CTEs <button class="explain-btn"
+                                                    data-topic="SQL Window Functions and CTEs">✨</button></li>
+                                            <li>Practical Statistics: Hypothesis Testing, A/B testing analysis <button
+                                                    class="explain-btn"
+                                                    data-topic="Hypothesis Testing and A/B testing">✨</button></li>
+                                            <li>Correlation vs. Causation</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item"><button
+                                    class="accordion-toggle w-full flex justify-between items-center text-left text-lg font-semibold p-4 bg-gray-900/70 rounded-lg hover:bg-gray-800 transition-colors"><span>Machine
+                                        Learning Foundations</span><svg class="w-5 h-5 transition-transform" fill="none"
+                                        stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M19 9l-7 7-7-7"></path>
+                                    </svg></button>
+                                <div class="accordion-content">
+                                    <div class="p-4 bg-gray-900 rounded-b-lg">
+                                        <ul class="list-disc list-inside text-gray-300 space-y-2">
+                                            <li>Supervised vs. Unsupervised Learning <button class="explain-btn"
+                                                    data-topic="Supervised vs Unsupervised Machine Learning">✨</button>
+                                            </li>
+                                            <li>Concepts: Regression, Classification, Clustering</li>
+                                            <li>Build a simple model with Scikit-learn</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item"><button
+                                    class="accordion-toggle w-full flex justify-between items-center text-left text-lg font-semibold p-4 bg-gray-900/70 rounded-lg hover:bg-gray-800 transition-colors"><span>AI
+                                        Integration 🤖</span><svg class="w-5 h-5 transition-transform" fill="none"
+                                        stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M19 9l-7 7-7-7"></path>
+                                    </svg></button>
+                                <div class="accordion-content">
+                                    <div class="p-4 bg-gray-900 rounded-b-lg">
+                                        <ul class="list-disc list-inside text-gray-300 space-y-2">
+                                            <li>Use AI to run statistical tests</li>
+                                            <li>Explore no-code AutoML tools in Power BI or GCP</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="p-6 md:p-8 rounded-2xl bg-gray-800/50 border border-gray-700 shadow-xl">
+                        <h2 class="text-2xl font-bold mb-1 gradient-text">Months 7-8: The Launchpad</h2>
+                        <p class="text-gray-400 mb-6">Focusing on a capstone project, cloud fundamentals, and career
+                            preparation.</p>
+                        <div class="space-y-3">
+                            <div class="accordion-item"><button
+                                    class="accordion-toggle w-full flex justify-between items-center text-left text-lg font-semibold p-4 bg-gray-900/70 rounded-lg hover:bg-gray-800 transition-colors"><span>Cloud
+                                        Fundamentals</span><svg class="w-5 h-5 transition-transform" fill="none"
+                                        stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M19 9l-7 7-7-7"></path>
+                                    </svg></button>
+                                <div class="accordion-content">
+                                    <div class="p-4 bg-gray-900 rounded-b-lg">
+                                        <ul class="list-disc list-inside text-gray-300 space-y-2">
+                                            <li>Basics of AWS, GCP, or Azure</li>
+                                            <li>Understand cloud data storage (e.g., S3, BigQuery)</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item"><button
+                                    class="accordion-toggle w-full flex justify-between items-center text-left text-lg font-semibold p-4 bg-gray-900/70 rounded-lg hover:bg-gray-800 transition-colors"><span>Capstone
+                                        Project</span><svg class="w-5 h-5 transition-transform" fill="none"
+                                        stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M19 9l-7 7-7-7"></path>
+                                    </svg></button>
+                                <div class="accordion-content">
+                                    <div class="p-4 bg-gray-900 rounded-b-lg">
+                                        <p>An end-to-end project combining SQL, Python, and a BI tool to solve a
+                                            real-world problem. This is your portfolio centerpiece.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item"><button
+                                    class="accordion-toggle w-full flex justify-between items-center text-left text-lg font-semibold p-4 bg-gray-900/70 rounded-lg hover:bg-gray-800 transition-colors"><span>Career
+                                        Prep & AI Integration 🤖</span><svg class="w-5 h-5 transition-transform"
+                                        fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M19 9l-7 7-7-7"></path>
+                                    </svg></button>
+                                <div class="accordion-content">
+                                    <div class="p-4 bg-gray-900 rounded-b-lg">
+                                        <ul class="list-disc list-inside text-gray-300 space-y-2">
+                                            <li>Build an online portfolio on GitHub/Kaggle</li>
+                                            <li>Use AI to optimize your resume and LinkedIn for ATS</li>
+                                            <li>Practice interviews with AI-generated questions</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+
+            <!-- Simple Roadmap Content -->
+            <div id="simpleRoadmap" class="hidden">
+                <div class="space-y-12">
+                    <section class="p-6 md:p-8 rounded-2xl bg-gray-800/50 border border-gray-700 shadow-xl">
+                        <h2 class="text-2xl font-bold mb-1 gradient-text">Month 1: Excel for Data Analysis</h2>
+                        <p class="text-gray-400 mb-6">Building a strong foundation with the most common data tool.</p>
+                        <div class="space-y-3">
+                            <div class="accordion-item"><button
+                                    class="accordion-toggle w-full flex justify-between items-center text-left text-lg font-semibold p-4 bg-gray-900/70 rounded-lg hover:bg-gray-800 transition-colors"><span>Skills
+                                        & Tools</span><svg class="w-5 h-5 transition-transform" fill="none"
+                                        stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M19 9l-7 7-7-7"></path>
+                                    </svg></button>
+                                <div class="accordion-content">
+                                    <div class="p-4 bg-gray-900 rounded-b-lg">
+                                        <ul class="list-disc list-inside text-gray-300 space-y-2">
+                                            <li>Advanced Formulas (XLOOKUP, INDEX-MATCH)</li>
+                                            <li>Data Cleaning & Formatting</li>
+                                            <li>Pivot Tables & Pivot Charts <button class="explain-btn"
+                                                    data-topic="Excel Pivot Tables">✨</button></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item"><button
+                                    class="accordion-toggle w-full flex justify-between items-center text-left text-lg font-semibold p-4 bg-gray-900/70 rounded-lg hover:bg-gray-800 transition-colors"><span>Monthly
+                                        Project</span><svg class="w-5 h-5 transition-transform" fill="none"
+                                        stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M19 9l-7 7-7-7"></path>
+                                    </svg></button>
+                                <div class="accordion-content">
+                                    <div class="p-4 bg-gray-900 rounded-b-lg">
+                                        <p>Analyze a sales dataset to build a summary dashboard with slicers in Excel.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="p-6 md:p-8 rounded-2xl bg-gray-800/50 border border-gray-700 shadow-xl">
+                        <h2 class="text-2xl font-bold mb-1 gradient-text">Month 2: Querying with SQL</h2>
+                        <p class="text-gray-400 mb-6">Learning to talk to databases, a non-negotiable skill.</p>
+                        <div class="space-y-3">
+                            <div class="accordion-item"><button
+                                    class="accordion-toggle w-full flex justify-between items-center text-left text-lg font-semibold p-4 bg-gray-900/70 rounded-lg hover:bg-gray-800 transition-colors"><span>Skills
+                                        & Tools</span><svg class="w-5 h-5 transition-transform" fill="none"
+                                        stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M19 9l-7 7-7-7"></path>
+                                    </svg></button>
+                                <div class="accordion-content">
+                                    <div class="p-4 bg-gray-900 rounded-b-lg">
+                                        <ul class="list-disc list-inside text-gray-300 space-y-2">
+                                            <li>Retrieving data with SELECT, WHERE</li>
+                                            <li>Combining tables with JOINs <button class="explain-btn"
+                                                    data-topic="SQL JOINs">✨</button></li>
+                                            <li>Aggregating data with GROUP BY</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item"><button
+                                    class="accordion-toggle w-full flex justify-between items-center text-left text-lg font-semibold p-4 bg-gray-900/70 rounded-lg hover:bg-gray-800 transition-colors"><span>Monthly
+                                        Project</span><svg class="w-5 h-5 transition-transform" fill="none"
+                                        stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M19 9l-7 7-7-7"></path>
+                                    </svg></button>
+                                <div class="accordion-content">
+                                    <div class="p-4 bg-gray-900 rounded-b-lg">
+                                        <p>Answer 10 business questions about a customer dataset using only SQL queries.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="p-6 md:p-8 rounded-2xl bg-gray-800/50 border border-gray-700 shadow-xl">
+                        <h2 class="text-2xl font-bold mb-1 gradient-text">Month 3: Visualizing with BI Tools</h2>
+                        <p class="text-gray-400 mb-6">Telling compelling stories with data dashboards.</p>
+                        <div class="space-y-3">
+                            <div class="accordion-item"><button
+                                    class="accordion-toggle w-full flex justify-between items-center text-left text-lg font-semibold p-4 bg-gray-900/70 rounded-lg hover:bg-gray-800 transition-colors"><span>Skills
+                                        & Tools</span><svg class="w-5 h-5 transition-transform" fill="none"
+                                        stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M19 9l-7 7-7-7"></path>
+                                    </svg></button>
+                                <div class="accordion-content">
+                                    <div class="p-4 bg-gray-900 rounded-b-lg">
+                                        <ul class="list-disc list-inside text-gray-300 space-y-2">
+                                            <li>Choose Power BI or Tableau</li>
+                                            <li>Connect to data sources (Excel, SQL)</li>
+                                            <li>Create interactive dashboards with filters</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item"><button
+                                    class="accordion-toggle w-full flex justify-between items-center text-left text-lg font-semibold p-4 bg-gray-900/70 rounded-lg hover:bg-gray-800 transition-colors"><span>Monthly
+                                        Project</span><svg class="w-5 h-5 transition-transform" fill="none"
+                                        stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M19 9l-7 7-7-7"></path>
+                                    </svg></button>
+                                <div class="accordion-content">
+                                    <div class="p-4 bg-gray-900 rounded-b-lg">
+                                        <p>Build a one-page, interactive sales dashboard in your chosen BI tool.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="p-6 md:p-8 rounded-2xl bg-gray-800/50 border border-gray-700 shadow-xl">
+                        <h2 class="text-2xl font-bold mb-1 gradient-text">Month 4: Analyzing with Python</h2>
+                        <p class="text-gray-400 mb-6">Using code to automate cleaning and analysis tasks.</p>
+                        <div class="space-y-3">
+                            <div class="accordion-item"><button
+                                    class="accordion-toggle w-full flex justify-between items-center text-left text-lg font-semibold p-4 bg-gray-900/70 rounded-lg hover:bg-gray-800 transition-colors"><span>Skills
+                                        & Tools</span><svg class="w-5 h-5 transition-transform" fill="none"
+                                        stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M19 9l-7 7-7-7"></path>
+                                    </svg></button>
+                                <div class="accordion-content">
+                                    <div class="p-4 bg-gray-900 rounded-b-lg">
+                                        <ul class="list-disc list-inside text-gray-300 space-y-2">
+                                            <li>Python Pandas for data cleaning <button class="explain-btn"
+                                                    data-topic="the Python Pandas library">✨</button></li>
+                                            <li>Matplotlib & Seaborn for basic plotting</li>
+                                            <li>Perform Exploratory Data Analysis (EDA)</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item"><button
+                                    class="accordion-toggle w-full flex justify-between items-center text-left text-lg font-semibold p-4 bg-gray-900/70 rounded-lg hover:bg-gray-800 transition-colors"><span>Monthly
+                                        Project</span><svg class="w-5 h-5 transition-transform" fill="none"
+                                        stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M19 9l-7 7-7-7"></path>
+                                    </svg></button>
+                                <div class="accordion-content">
+                                    <div class="p-4 bg-gray-900 rounded-b-lg">
+                                        <p>Use Python to clean a messy dataset and create a short report with key
+                                            findings and charts.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="p-6 md:p-8 rounded-2xl bg-gray-800/50 border border-gray-700 shadow-xl">
+                        <h2 class="text-2xl font-bold mb-1 gradient-text">Month 5: Practical Statistics</h2>
+                        <p class="text-gray-400 mb-6">Understanding the "why" behind the numbers to make sound
+                            decisions.</p>
+                        <div class="space-y-3">
+                            <div class="accordion-item"><button
+                                    class="accordion-toggle w-full flex justify-between items-center text-left text-lg font-semibold p-4 bg-gray-900/70 rounded-lg hover:bg-gray-800 transition-colors"><span>Skills
+                                        & Tools</span><svg class="w-5 h-5 transition-transform" fill="none"
+                                        stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M19 9l-7 7-7-7"></path>
+                                    </svg></button>
+                                <div class="accordion-content">
+                                    <div class="p-4 bg-gray-900 rounded-b-lg">
+                                        <ul class="list-disc list-inside text-gray-300 space-y-2">
+                                            <li>Descriptive Statistics (Mean, Median, Mode)</li>
+                                            <li>Understanding distributions</li>
+                                            <li>Correlation vs. Causation <button class="explain-btn"
+                                                    data-topic="Correlation vs Causation">✨</button></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item"><button
+                                    class="accordion-toggle w-full flex justify-between items-center text-left text-lg font-semibold p-4 bg-gray-900/70 rounded-lg hover:bg-gray-800 transition-colors"><span>Monthly
+                                        Project</span><svg class="w-5 h-5 transition-transform" fill="none"
+                                        stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M19 9l-7 7-7-7"></path>
+                                    </svg></button>
+                                <div class="accordion-content">
+                                    <div class="p-4 bg-gray-900 rounded-b-lg">
+                                        <p>Perform a statistical analysis on a dataset and write a summary of your
+                                            findings about the relationships between variables.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="p-6 md:p-8 rounded-2xl bg-gray-800/50 border border-gray-700 shadow-xl">
+                        <h2 class="text-2xl font-bold mb-1 gradient-text">Month 6: Capstone & Career Prep</h2>
+                        <p class="text-gray-400 mb-6">Combining all skills into a portfolio project and preparing for
+                            the job market.</p>
+                        <div class="space-y-3">
+                            <div class="accordion-item"><button
+                                    class="accordion-toggle w-full flex justify-between items-center text-left text-lg font-semibold p-4 bg-gray-900/70 rounded-lg hover:bg-gray-800 transition-colors"><span>Capstone
+                                        Project</span><svg class="w-5 h-5 transition-transform" fill="none"
+                                        stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M19 9l-7 7-7-7"></path>
+                                    </svg></button>
+                                <div class="accordion-content">
+                                    <div class="p-4 bg-gray-900 rounded-b-lg">
+                                        <p>Analyze a complex dataset from end-to-end. Define a business problem, use
+                                            SQL/Python to analyze, and present findings in a BI dashboard.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item"><button
+                                    class="accordion-toggle w-full flex justify-between items-center text-left text-lg font-semibold p-4 bg-gray-900/70 rounded-lg hover:bg-gray-800 transition-colors"><span>Career
+                                        Prep</span><svg class="w-5 h-5 transition-transform" fill="none"
+                                        stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M19 9l-7 7-7-7"></path>
+                                    </svg></button>
+                                <div class="accordion-content">
+                                    <div class="p-4 bg-gray-900 rounded-b-lg">
+                                        <ul class="list-disc list-inside text-gray-300 space-y-2">
+                                            <li>Build a simple online portfolio</li>
+                                            <li>Craft a data-focused resume</li>
+                                            <li>Practice common interview questions</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </section>
+
+        <!-- AI-Powered Tools Section -->
+        <section id="aitools" class="reveal mb-24">
+            <div class="p-8 md:p-10 rounded-2xl bg-gray-800/50 border border-gray-700 shadow-2xl">
+                <h2 class="text-3xl md:text-4xl font-bold text-center mb-4 text-white">Your Personal AI Learning Suite
+                </h2>
+                <p class="text-center text-gray-400 max-w-2xl mx-auto mb-12">Integrated directly into your learning
+                    journey to accelerate your growth.</p>
+                <div class="grid md:grid-cols-2 gap-8">
+                    <!-- Project Idea Generator -->
+                    <div>
+                        <h3 class="text-2xl font-bold mb-2 gradient-text">✨ AI Project Idea Generator</h3>
+                        <p class="text-gray-400 mb-4">Turn your passions into portfolio pieces. Enter an interest to get
+                            unique, data-driven project ideas.</p>
+                        <input type="text" id="projectInterest" placeholder="e.g., Video Games, Healthcare, Finance"
+                            class="w-full bg-gray-900 border border-gray-700 rounded-lg px-4 py-2 text-white placeholder-gray-500 focus:ring-2 focus:ring-teal-500 focus:outline-none">
+                        <button id="generateProjectBtn"
+                            class="mt-4 w-full bg-teal-600 hover:bg-teal-700 text-white font-bold py-2 px-6 rounded-lg transition-colors duration-300">Generate
+                            Ideas</button>
+                        <div id="projectResult" class="mt-6 p-4 bg-gray-900/50 rounded-lg min-h-[100px]"></div>
+                    </div>
+                    <!-- AI Career Coach -->
+                    <div>
+                        <h3 class="text-2xl font-bold mb-2 gradient-text">✨ AI Career Coach</h3>
+                        <p class="text-gray-400 mb-4">Get expert answers to your career questions, from interview prep
+                            to resume writing.</p>
+                        <textarea id="careerQuestion" rows="1"
+                            class="w-full bg-gray-900 border border-gray-700 rounded-lg px-4 py-2 text-white placeholder-gray-500 focus:ring-2 focus:ring-teal-500 focus:outline-none"
+                            placeholder="e.g., How should I structure my resume?"></textarea>
+                        <button id="askCoachBtn"
+                            class="mt-4 w-full bg-teal-600 hover:bg-teal-700 text-white font-bold py-2 px-6 rounded-lg transition-colors duration-300">Ask
+                            Coach</button>
+                        <div id="coachResult" class="mt-6 p-4 bg-gray-900/50 rounded-lg min-h-[100px]"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section id="testimonials" class="reveal mb-24">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-white">From Our Alumni</h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="bg-gray-800/50 border border-gray-700 p-8 rounded-2xl">
+                    <p class="text-gray-300 mb-4">"The AI-powered roadmap was a game changer. The project generator
+                        helped me build a portfolio that got me hired before I even graduated. Skill Network gave me the
+                        confidence and the skills to land my dream job."</p>
+                    <div class="font-bold text-teal-400">- Priya Sharma, Data Analyst @ TechCorp</div>
+                </div>
+                <div class="bg-gray-800/50 border border-gray-700 p-8 rounded-2xl">
+                    <p class="text-gray-300 mb-4">"I started with zero experience. The 6-month core path was perfectly
+                        paced, and the 'Explain Simply' feature saved me countless hours of confusion. I can't recommend
+                        Skill Network enough!"</p>
+                    <div class="font-bold text-teal-400">- Ben Carter, Junior BI Developer</div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Final CTA / Footer -->
+        <footer id="enroll"
+            class="reveal text-center py-20 px-6 rounded-2xl bg-gradient-to-r from-teal-600 to-indigo-600">
+            <h2 class="text-3xl md:text-4xl font-extrabold text-white mb-4">Ready to Start Your Data Career?</h2>
+            <p class="text-indigo-200 max-w-2xl mx-auto mb-8">Join hundreds of successful graduates. Enroll in a Skill
+                Network pathway today and invest in your future.</p>
+            <a href="#"
+                class="bg-white hover:bg-gray-200 text-gray-900 font-bold py-3 px-8 rounded-lg transition-colors text-lg">Enroll
+                Now</a>
+            <p class="text-sm text-indigo-200 mt-8">&copy; 2025 Skill Network. All rights reserved.</p>
+        </footer>
+
+    </main>
+
+    <!-- Explanation Modal -->
+    <div id="explanationModal"
+        class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black bg-opacity-80 modal-backdrop opacity-0 pointer-events-none">
+        <div
+            class="modal-content bg-gray-800 border border-gray-700 rounded-2xl shadow-2xl w-full max-w-2xl max-h-[80vh] flex flex-col transform scale-95 opacity-0">
+            <div class="flex justify-between items-center p-4 border-b border-gray-700">
+                <h3 id="modalTitle" class="text-2xl font-bold gradient-text">Explanation</h3>
+                <button id="closeModalBtn" class="text-gray-400 hover:text-white text-3xl">&times;</button>
+            </div>
+            <div id="modalBody" class="p-6 overflow-y-auto gemini-response">
+                <!-- Content will be injected by JS -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Link to external JS -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>
